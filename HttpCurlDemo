@@ -150,7 +150,7 @@ $header = [
 
 $retStr = HttpCurl::request('http://www.baidu.com/get', 'post', json_encode($params), $header);
 $ret = json_decode($retStr[0], true);
-if ($ret['status'] != 200) {
+if ($ret['status'] == 200) {
     // 请求成功
 } else {
     // 请求失败
